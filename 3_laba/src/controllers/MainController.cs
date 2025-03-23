@@ -34,9 +34,19 @@ namespace _3_laba.src.controllers
         }
 
         [HttpPost("predict")]
-        public IActionResult Predict([FromBody] MovieReview review)
+        public IActionResult Predict([FromBody] ReviewForm form)
         {
+            MovieReview review = new MovieReview();
+            review.ReviewText = form.reviewContent;
+            _service.AddReview(form);
+
             return Ok(_service.Predict(review));
+        }
+
+        [HttpGet("reviews")]
+        public IActionResult Reviews()
+        {
+            return Ok(_service.GetAllReviews());
         }
     }
 }

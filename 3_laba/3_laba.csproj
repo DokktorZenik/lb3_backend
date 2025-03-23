@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="4.0.0" />
     <PackageReference Include="Microsoft.ML.TensorFlow" Version="4.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.16.0" />
     <PackageReference Include="TensorFlow.NET" Version="0.20.1" />
   </ItemGroup>
